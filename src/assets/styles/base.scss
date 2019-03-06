@@ -1,0 +1,75 @@
+$bgColor: #f8f8f8;
+$borColor:#fff;
+
+$border-com:1px solid #000;
+
+$font-xs-Size:16px;
+$font-sm-Size:24px;
+$font-md-Size:30px;
+$font-lg-Size:36px;
+
+$font-cur-Color:#e30f28;
+$font-com-Color:#8b8b8b;
+$font-title-Color:#fff;
+$font-count-Color:#fff;
+$font-free-Color:#fff;
+
+$color-Main: #b4b6ee;
+$color-Link:#FFEC1D;
+$color-Cur: #ff391c;
+
+$iconSize:60px;
+$icon-com-Color:darkgoldenrod;
+$icon-cur-Color:darkgoldenrod;
+$icon-md-Size:30px;
+$icon-md-Color:#fff;
+
+
+@mixin sj($fx:top,$size:10px,$color:red){
+  @if($fx==top){
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 $size $size $size;
+    border-color: transparent transparent $color transparent;
+  }@else if($fx==right){
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width:  $size 0 $size $size;
+    border-color: transparent transparent transparent $color;
+  }@else if($fx==bottom){
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width:  $size  $size 0 $size;
+    border-color:$color  transparent transparent transparent ;
+  }@else if($fx==left){
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width:  $size  $size  $size 0;
+    border-color: transparent $color transparent transparent ;
+  }
+}
+
+.icon{
+  &_sjT{
+    @include sj($fx:right,$size:20px,$color:yellow)
+  }
+  &_sjR{
+    @include sj($fx:right,$size:20px,$color:yellow)
+  }
+  &_sjB{
+    @include sj($fx:right,$size:20px,$color:yellow)
+  }
+  &_sjL{
+    @include sj($fx:right,$size:20px,$color:yellow)
+  }
+  &_search {
+  background: #0000fe;
+    color: #ffffff;
+}
+}
+
+
