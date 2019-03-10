@@ -1,5 +1,7 @@
 <template>
-
+  <div class="selectClothes">
+    selectClothes
+  </div>
 </template>
 
 <script type="text/ecmascript-6">

@@ -14,3 +14,7 @@
   font-family: 'black';
   src:url('../fonts/black.ttf')
 }
+@font-face {
+  font-family: 'title';
+  src: url('../fonts/Mika%20Melvas%20-%20RionaSans-ExtraLightItalic.otf');
+}

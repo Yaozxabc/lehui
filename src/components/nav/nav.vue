@@ -2,31 +2,31 @@
 <div class="navlist">
   <ul >
     <li>
-      <router-link :to="{path:'/aaa'}" class="acitve">
+      <router-link :to="{path:'/home'}" class="acitve">
         <i class="iconfont icon-home"></i>
         <p>首页</p>
       </router-link>
     </li>
     <li>
-      <router-link :to="{path:'/aaa'}">
+      <router-link :to="{path:'/selectClothes'}">
         <i class="iconfont icon-hanger"></i>
         <p>选衣</p>
       </router-link>
     </li>
     <li>
-      <router-link :to="{path:'/aaa'}">
+      <router-link :to="{path:'/starPeople'}">
         <i class="iconfont icon-alien-ship-"></i>
         <p>明星达人</p>
       </router-link>
     </li>
     <li>
-      <router-link :to="{path:'/aaa'}">
+      <router-link :to="{path:'/lehuiBox'}">
         <i class="iconfont icon-gift"></i>
         <p>乐荟盒子</p>
       </router-link>
     </li>
     <li>
-      <router-link :to="{path:'/aaa'}">
+      <router-link :to="{path:'/mine'}">
         <i class="iconfont icon-user"></i>
         <p>我的</p>
       </router-link>

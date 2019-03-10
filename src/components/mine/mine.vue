@@ -1,5 +1,7 @@
 <template>
-
+  <div class="mine">
+    mine
+  </div>
 </template>
 
 <script type="text/ecmascript-6">

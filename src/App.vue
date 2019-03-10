@@ -8,6 +8,7 @@
 </template>
 
 <script>
+  import {SliderImg} from 'res/mock/slider';
   import Footer from 'com/footer/footer'
 export default {
   name: 'App',
@@ -15,6 +16,9 @@ export default {
     return{
 
     }
+  },
+  mounted(){
+
   },
   components:{
     Footer
