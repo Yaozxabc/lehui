@@ -29,7 +29,7 @@
         },
         data:{
           type:Array,
-          default:[]
+          default:()=>[]
         }
       },
         data(){
@@ -55,7 +55,6 @@
           return
         }
         this._setSliderWidth(true);
-        console.log(this.slider)
         this.slider.refresh()
       })
   },
