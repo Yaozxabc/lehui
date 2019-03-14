@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    lehui
+    <img src="static/imgs/new-pro/01.jpg" alt=""/>
   </div>
 </template>
 

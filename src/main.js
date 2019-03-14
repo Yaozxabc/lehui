@@ -7,7 +7,7 @@ import store from './store'
 import axios from 'axios'
 import Mock from 'mockjs'
 import _ from 'lodash'
-import Vlazy from 'vue-lazyload'
+import Vlazyload from 'vue-lazyload'
 import 'lib-flexible/flexible.js'
 import 'babel-polyfill'
 import fastclick from 'fastclick'
@@ -15,6 +15,9 @@ fastclick.attach(document.body)
 
 Vue.config.productionTip = false
 
+Vue.use(Vlazyload,{
+  loading:require('res/images/headline/title.jpg')
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

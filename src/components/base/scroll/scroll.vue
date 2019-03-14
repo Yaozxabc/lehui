@@ -24,6 +24,14 @@
           type:Boolean,
           default :false
         },
+        scrollY:{
+          type:Boolean,
+          default:true
+        },
+        scrollX:{
+          type:Boolean,
+          default:false
+        },
         pullUp:{
           type:Boolean,
           default:true
@@ -49,8 +57,8 @@
           return
         }
         this.scroll=new BScroll(this.$refs.wrapper,{
-          scrollY:true,
-          scrollX:false,
+          scrollY:this.scrollY,
+          scrollX:this.scrollX,
           probeType:this.probeType,//设定滚动事件是否实时触发变化
           click:this.click,
           //初始化数据

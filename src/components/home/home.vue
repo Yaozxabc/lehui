@@ -9,13 +9,24 @@
           </a>
     </div>
     </Slider>
-  <div class="headline">
+    <div class="headline">
     <head-line></head-line>
   </div>
-  <div class="bananer">
+    <div class="bananer">
     <Bananer></Bananer>
   </div>
-    <Bananer></Bananer>
+    <div class="newProduct">
+      <Types title="新品上市"  :data="newProducts"  ></Types>
+    </div>
+    <div class="fashion_peple">
+      <Types title="时尚达人" @refresh="getProduct" :data="newProducts" :isRefresh="fashionRefresh"></Types>
+    </div>
+    <div class="fashion_classrom">
+      <type-fashion title="时尚课堂" :fashionList="typeFashion" @select="toShow"></type-fashion>
+    </div>
+    <div class="fashion_news">
+      <type-fashion title="时尚咨讯" :fashionList="typeFashion"></type-fashion>
+    </div>
   </div>
 </div>
 </Scroll>
@@ -27,11 +38,28 @@
   import HeadLine from 'com/headline/headline'
   import Bananer from 'com/bananer/bananer'
   import Scroll from 'com/base/scroll/scroll'
+  import Types from "com/base/types/types"
+  import TypeFashion from "com/base/type-fashion/type-fashion"
 
     export default{
         data(){
             return {
-              sliderlist:[]
+              fashionRefresh:true,
+              circle:true,
+              sliderlist:[],
+              newProducts:[
+                {name:"LV",text:"LV手提包"},
+                {name:"LV",text:"LV手提包"},
+                {name:"LV",text:"LV手提包"},
+                {name:"LV",text:"LV手提包"},
+                {name:"LV",text:"LV手提包"}
+
+              ],
+              typeFashion:[
+                {imgurl:"static/fashion-class.jpg",text:"lv明星代言",count:"156",free:"68.00"},
+                {imgurl:"static/fashion-class.jpg",text:"lv明星代言",count:"156",free:"68.00"},
+                {imgurl:"static/fashion-class.jpg",text:"lv明星代言",count:"156",free:"68.00"}
+              ]
             }
         },
   mounted(){
@@ -45,18 +73,23 @@
         text:SliderImg("750","380")
         });
       }
+    },
+    getProduct(){
+      alert("dddd")
+    },
+    toShow(index){
+      console.log(index);
     }
   },
   components:{
-    Slider,HeadLine,Bananer,Scroll
+    Slider,HeadLine,Bananer,Scroll,Types,TypeFashion
   }
     }
 </script>
 
 
 <style scoped lang="scss">
-.home{
-position:fixed;
+.home{  position:fixed;
   left: 0;
   right: 0;
 bottom:85px;
@@ -76,6 +109,12 @@ h1{
   top: calc( 50% - 30px);
 
 }
+}
+.newProduct,.fashion_peple{
+  margin-bottom: 16px;
+}
+.fashion_classrom,.fashion_news{
+  margin-bottom: 18px;
 }
 }
 </style>
